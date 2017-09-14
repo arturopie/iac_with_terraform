@@ -2,6 +2,10 @@ provider "aws" {
   region = "us-west-2"
 }
 
+variable "message" {
+  default = "Hello, Wolrd"
+}
+
 data "aws_ami" "ubuntu" {
   filter {
     name = "name"
@@ -17,13 +21,13 @@ resource "aws_instance" "my-instance" {
 
   user_data = <<-EOF
               #!/bin/bash
-              echo "Hello, World" > index.html
+              echo "${var.message}" > index.html
               nohup busybox httpd -f -p 8080 &
               EOF
 
   vpc_security_group_ids = ["${aws_security_group.my-sg.id}"]
   tags {
-    Name = "Hello World"
+    Name = "Hello, World"
   }
 }
 
