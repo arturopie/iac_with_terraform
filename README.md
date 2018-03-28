@@ -18,7 +18,7 @@ aws_secret_access_key = < Replace with you secret access key >
 
 ## Deploy infrastructure 🚀
 
-**Note**: Deploying this infrastructure could incur some AWS costs. Make sure you [destroy the infrastructure](#destroy-infrastructure) at the end
+**Note**: Deploying this infrastructure could incur some AWS costs. Make sure you [destroy the infrastructure](#destroy-infrastructure-) at the end
 
 1. Run `terraform apply`
 1. Review changes and answer `yes`
