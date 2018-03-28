@@ -9,7 +9,7 @@ variable "message" {
 data "aws_ami" "ubuntu" {
   filter {
     name = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-20161020"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-20180306"]
   }
 
   owners = ["099720109477"]
